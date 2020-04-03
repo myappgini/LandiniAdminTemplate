@@ -115,9 +115,12 @@ label[for='id'] + div {
 - New Mebership Profile
 
 Add time line feature
+
 ![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/Template003.PNG)
 
 - Extend template to Admin Area
+
+![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/Template011.PNG)
 
 - Bootstrap 4 support
 
