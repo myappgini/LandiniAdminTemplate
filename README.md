@@ -142,4 +142,4 @@ If the hidden group is created, the tables that are within this group will only 
 
 ## Resources
   
-- <https://adminlte.io/themes/AdminLAT/documentation/index.html#introduction>
+- https://adminlte.io/docs/3.0/
