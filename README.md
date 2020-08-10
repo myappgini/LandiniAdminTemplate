@@ -1,7 +1,7 @@
 
 # Landini Andmin Template for AppGini with AdminLTE 3 and bootstrap 4
 
-## Release R2.0.0
+## Release R2.5.0
 
 
 ![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/Template001.PNG)
@@ -59,6 +59,18 @@ function  getLteStatus($LTE_enable = true){
 ```
 
 ## Changes
+10/08/20
+- Update to AdminLTE 3.0.5
+- Once the plugin is installed, it is re-activated after a new compilation.
+- Modifications are made in folders for a better update of Admin LTE.
+- Different home pages can be programmed according to user groups.
+- the admin area now has the same environment as all the rest of the template.
+- The profile page now has a time-line where the movement of the last user record is shown.
+- the quick search is placed in the upper navigation bar.
+- fixes some spots for better viewing on small screens.
+- others fix.
+
+Last Changues
 
 - Update to AdminLTE 3.0.4
 
