@@ -7,7 +7,7 @@
 ?>
 
 <div class="bs-docs-section row">
-    <h1 class="page-header"><img src="template.mid.png" style="height: 1em;"> Landini AdminLTE template	 for AppGini</h1>
+    <h1 class="page-header"><img src="template.mid.png" style="height: 1em;"> Landini Admin template for AppGini</h1>
     <p class="lead">
 		<a href="index.php">Projects</a> &gt; 
 		<a href="project.php?axp=<?php echo urlencode($axp_md5); ?>"><?php echo substr($projectFile, 0, -4); ?></a> &gt;

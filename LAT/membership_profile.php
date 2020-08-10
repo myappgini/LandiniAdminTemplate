@@ -1,18 +1,22 @@
 <?php
 define("PREPEND_PATH", "../");
-$currDir = dirname(__FILE__) . "/..";
-include("$currDir/defaultLang.php");
-include("$currDir/language.php");
-include("$currDir/lib.php");
+$rootDir = dirname(__FILE__) . "/..";
+include("$rootDir/defaultLang.php");
+include("$rootDir/language.php");
+include("$rootDir/lib.php");
+include("$rootDir/LAT/myLib.php");
+include_once("$rootDir/LAT/profile/mpi.php");
 
 $adminConfig = config('adminConfig');
+$imageFolder = $rootDir . "/images/";
 
 /* no access for guests */
 $mi = getMemberInfo();
 if (!$mi['username'] || $mi['group'] == $adminConfig['anonymousGroup']) {
-  @header('Location: index.php');
+  @header('Location: ../index.php');
   exit;
 }
+$mpi = new Mpi($mi['username'], $imageFolder);
 
 /* save profile */
 if ($_POST['action'] == 'saveProfile') {
@@ -111,7 +115,7 @@ if (is_array($userTables))  foreach ($userTables as $tn => $tc) {
   $permissions[$tn] = getTablePermissions($tn);
 }
 /* the profile page view */
-include_once("$currDir/header.php"); ?>
+include_once("$rootDir/header.php"); ?>
 
 <div id="notify" class="alert alert-success" style="display: none;"></div>
 <div id="loader" style="display: none;"><i class="glyphicon glyphicon-refresh"></i> <?php echo $Translation['Loading ...']; ?></div>
@@ -206,7 +210,16 @@ include_once("$currDir/header.php"); ?>
                       <h3 class="timeline-header"><a href="<?php echo PREPEND_PATH ?><?php echo $item['tableName'] ?>_view.php?SelectedID=<?php echo $item['pkValue'] ?>">Record <?php echo $abm . " to " . $tableName; ?></a> table</h3>
 
                       <div class="timeline-body">
-                        <?php echo getCSVData($item['tableName'], $item['pkValue']); ?>
+                      <?php 
+                        if(!$pkField=getPKFieldName($item['tableName'])) {
+                          return "";
+                        }
+                        $where_id = " `{$item['tableName']}`.`$pkField`='" . makeSafe($item['pkValue'], false) . "' ";
+
+                        $result=  getDataTable($item['tableName'],$where_id);
+                        echo implode(',',$result);
+                        //echo getCSVData($item['tableName'], $item['pkValue']); 
+                        ?>
                       </div>
                       <div class="timeline-footer">
                         <a href="<?php echo PREPEND_PATH ?><?php echo $item['tableName'] ?>_view.php?SelectedID=<?php echo $item['pkValue'] ?>" class="btn btn-primary btn-sm">Open</a>
@@ -441,4 +454,4 @@ function permIcon($perm)
 }
 ?>
 
-<?php include_once("$currDir/footer.php"); ?>
+<?php include_once("$rootDir/footer.php"); ?>

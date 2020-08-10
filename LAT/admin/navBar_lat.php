@@ -1,7 +1,12 @@
 <?php
-$latDir = dirname(__FILE__)."/..";
+$latDir = dirname(__FILE__) . "/..";
 $imageFolder = $latDir . "/../images/";
 include_once("{$latDir}/profile/mpi.php");
+if (!isset($Translation)) {
+  include("{$latDir}/../defaultLang.php");
+  include("{$latDir}/../language.php");
+  include("{$latDir}/../language-admin.php");
+}
 
 $mpi = new Mpi($memberInfo['username'], $imageFolder);
 $usr_img = PREPEND_PATH . "images/" . $mpi->thumb;
@@ -24,10 +29,10 @@ $usr_img = PREPEND_PATH . "images/" . $mpi->thumb;
     <?php
     if (getLoggedAdmin()) { ?>
       <li class="status">
-        <a href="<?php echo PREPEND_PATH; ?>admin/pageHome.php" class="nav-link" title="<?php echo html_attr($Translation['admin area']); ?>"><i class="fas fa-cogs"></i>&nbsp;<?php echo $Translation['admin area']; ?></a>
-    </li>
-    <?php } 
-    if (!$inLogin){
+        <a href="<?php echo PREPEND_PATH; ?>index.php" class="nav-link" title="<?php echo html_attr($Translation["user's area"]); ?>"><i class="fas fa-user"></i>&nbsp;<?php echo $Translation["user's area"]; ?></a>
+      </li>
+    <?php }
+    if (!$inLogin) {
     ?>
       <!-- Control Sidebar Toggle Button -->
       <li class="nav-item">

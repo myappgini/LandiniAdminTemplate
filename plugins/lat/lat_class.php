@@ -60,7 +60,7 @@
 
                         /* insert $code and save */
                         $code_comment = "/* Inserted by {$this->title} on " . date('Y-m-d h:i:s') . " */";
-                        $new_code ="\n\t\t<?php {$code_comment} ?>\n\t\t{$code}\n\t\t<?php /* End of {$this->title} code */ ?>\n";
+                        $new_code ="\n<?php {$code_comment} ?>\n\t\t{$code}\n<?php /* End of {$this->title} code */ ?>\n";
 
                         $new_function_code = preg_replace(
                                 "/".makeSafe($find_function)."/" ,

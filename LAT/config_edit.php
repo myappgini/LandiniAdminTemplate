@@ -1,9 +1,9 @@
 <?php
 define("PREPEND_PATH", "../");
-$hooks_dir = dirname(__FILE__);
-include("{$hooks_dir}/../defaultLang.php");
-include("{$hooks_dir}/../language.php");
-include("{$hooks_dir}/../lib.php");
+$lat_dir = dirname(__FILE__);
+include("{$lat_dir}/../defaultLang.php");
+include("{$lat_dir}/../language.php");
+include("{$lat_dir}/../lib.php");
 
 /* grant access to the groups 'Admins' */
 $user_data = getMemberInfo();
@@ -13,7 +13,7 @@ if(!in_array($user_data['group'], array('Admins'))){
 	exit;
 }
 
-include_once("{$hooks_dir}/../header.php");
+include_once("{$lat_dir}/../header.php");
 
 $user_group = strtolower($user_data["group"]);
 ?>
@@ -76,4 +76,4 @@ $user_group = strtolower($user_data["group"]);
 	<div data-type="object"></div>
 	<div data-type="array"></div>
 </div>
-<?php include_once("$hooks_dir/../footer.php"); ?>
+<?php include_once("$lat_dir/../footer.php"); ?>
