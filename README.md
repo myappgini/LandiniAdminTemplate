@@ -137,13 +137,13 @@ label[for='id'] + div {
 
 - table view is adapted to be seen vertically.
 
-![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/TableNormalView.PNG)
+![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/TableNormalView.png)
 
-![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/TableSamallScreen.PNG)
+![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/TableSamallScreen.png)
 
 - Show fields in a line in the detail view and prepend information to the field
 
-![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/Prepend_info.png.PNG)
+![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/Prepend_info.png)
 
 simple use:
 ``
@@ -157,9 +157,9 @@ simple use:
 ``
 - Buttons without labels function.
 
-![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/buttons_without_label.png.PNG)
+![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/buttons_without_label.png)
 
-![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/buttons_without_label_TV.png.PNG)
+![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/buttons_without_label_TV.png.png)
 
 many option to use
 
