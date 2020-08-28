@@ -136,10 +136,13 @@ label[for='id'] + div {
 ## New Features
 
 - table view is adapted to be seen vertically.
+
 ![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/TableNormalView.PNG)
+
 ![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/TableSamallScreen.PNG)
 
 - Show fields in a line in the detail view and prepend information to the field
+
 ![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/Prepend_info.png.PNG)
 
 simple use:
@@ -153,15 +156,19 @@ simple use:
 
 ``
 - Buttons without labels function.
+
 ![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/buttons_without_label.png.PNG)
+
 ![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/buttons_without_label_TV.png.PNG)
 
 many option to use
+
 ``  
     removeText('#top_buttons .btn-group .btn');
     removeText('.pagination-section .btn');
     removeText('.btn');
     removeText('#addNew');
+    
 ``
 
 - New Mebership Profile
