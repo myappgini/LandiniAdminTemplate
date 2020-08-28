@@ -28,17 +28,33 @@ function updateBS() {
     $j('.btn').removeClass('btn-lg');
     $j('.btn-group-lg').removeClass('btn-group-lg');
     $j('#quick-search').remove();
+    $j(".btn-toolbar").removeClass().addClass('sticky-top');
 
-    //admin tools
+    //changue offset classes TODO: add more
+    $j('.col-lg-offset-3').addClass('offset-lg-3');
+    $j('.col-lg-offset-1').addClass('offset-lg-1');
+
+    //modal windows
+    $j('.modal-dialog').addClass('modal-xl');
+    $j('.modal-title').prependTo('.modal-header');
+
     setTimeout(function() {
+        //admin tools
         $j('#admin-tools-menu-button').removeClass('pull-right');
         $adminToolsMenu = $j('#admin-tools-menu');
         $adminToolsMenu.removeAttr('id');
         $adminToolsMenu.each(function() {
             $j(this).children().addClass('dropdown-item');
         });
+        //fix nav-tab display
+        $tabs = $j('ul.nav.nav-tabs li');
+        $tabs.addClass('nav-item');
+        $tabs.each(function(index, element) {
+            if ($j(this).hasClass('active')) {
+                $j(this).children('a').addClass('active');
+            }
+            $j(this).children('a').addClass('nav-link');
+        });
     }, 500);
-    //modal windows
-    $j('.modal-dialog').addClass('modal-xl');
-    $j('.modal-title').prependTo('.modal-header');
+
 }

@@ -1,54 +1,132 @@
-.content-wrapper {
-  min-height: 100%;
-  background-color: #ecf0f5;
-  background: url(../backgrounds/photo2.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  z-index: 800;
-}
-
-.container-fluid .row {
-  background-color: white;
-  border-radius: 10px;
-}
-
-label[for='id'] {
-  display: none;
-}
-
-label[for='id']+div {
-  display: none;
-}
-
-.page-header {
-  margin: 10px 0 20px 0;
-  font-size: 22px;
-}
-
-/* */
-.hidden {
-  visibility: hidden !important;
-}
-
-/* tv tools button widths */
-.tv-tools .btn {
-  width: 5em;
-}
-
-.rtl {
-  direction: rtl !important;
-}
-
-.ltr {
-  direction: ltr !important;
-}
-
-table a,
-.table a {
-  text-decoration: none !important;
-}
-
-#children-tabs li a {
-  display: block !important;
-}
+    .content-wrapper {
+        min-height: 100%;
+        background-color: #ecf0f5;
+        background: url(../backgrounds/photo2.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        z-index: 800;
+    }
+    
+    .container-fluid .row {
+        background-color: white;
+        border-radius: 10px;
+    }
+    
+    label[for='id'] {
+        display: none;
+    }
+    
+    label[for='id']+div {
+        display: none;
+    }
+    
+    .hspacer-xs {
+        margin-left: 0.1em;
+        margin-right: 0.1em;
+    }
+    
+    .hspacer-sm {
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+    }
+    
+    .hspacer-md {
+        margin-left: 0.4em;
+        margin-right: 0.4em;
+    }
+    
+    .hspacer-lg {
+        margin-left: 0.8em;
+        margin-right: 0.8em;
+    }
+    
+    .vspacer-xs {
+        margin-top: 0.1em;
+        margin-bottom: 0.1em;
+    }
+    
+    .vspacer-sm {
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+    }
+    
+    .vspacer-md {
+        margin-top: 0.4em;
+        margin-bottom: 0.4em;
+    }
+    
+    .vspacer-lg {
+        margin-top: 0.8em;
+        margin-bottom: 0.8em;
+    }
+    
+    .page-header {
+        margin: 10px 0 20px 0;
+        font-size: 22px;
+    }
+    /* */
+    
+    .hidden {
+        visibility: hidden !important;
+    }
+    /* tv tools button widths */
+    
+    .tv-tools .btn {
+        width: 5em;
+    }
+    
+    .rtl {
+        direction: rtl !important;
+    }
+    
+    .ltr {
+        direction: ltr !important;
+    }
+    
+    table a,
+    .table a {
+        text-decoration: none !important;
+    }
+    
+    #children-tabs li a {
+        display: block !important;
+    }
+    /* changue table view in small screens */
+    
+    @media only screen and (max-width: 768px),
+    (min-device-width: 768px) and (max-device-width: 1024px) {
+        /* Force table to not be like tables anymore */
+        div.table-responsive table,
+        div.table-responsive thead,
+        div.table-responsive tbody,
+        div.table-responsive th,
+        div.table-responsive td,
+        div.table-responsive tr {
+            display: block;
+        }
+        /* Hide table headers (but not display: none;, for accessibility) */
+        div.table-responsive thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        div.table-responsive tr {
+            border: 1px solid #ccc;
+        }
+        div.table-responsive td {
+            /* Behave  like a "row" */
+            border-bottom: 1px solid #eee;
+            position: relative;
+        }
+        div.table-responsive td:before {
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+    }

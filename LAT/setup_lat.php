@@ -1,7 +1,7 @@
 <?php
 function activate_LAT($fn, $x, $ADMINAREA = false)
 {
-	if (!empty($fn)) {
+	if (!empty($fn) && get_LTA_Status()) {
 		$rootDir = dirname(__FILE__) . "/..";
 		if ($ADMINAREA) define('PREPEND_PATH', '../');
 		include_once("$rootDir/LAT/" . $fn . "_lat.php");

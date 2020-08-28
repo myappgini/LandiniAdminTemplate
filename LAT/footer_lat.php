@@ -57,6 +57,7 @@ if (!$memberInfo['admin'] && $memberInfo['group'] !== 'anonymous') {
         disablePrototypeJS('hide', pluginsToDisable);
     }
 </script>
+<script>labelize_table();</script>
 </body>
 <!-- /boody -->
 

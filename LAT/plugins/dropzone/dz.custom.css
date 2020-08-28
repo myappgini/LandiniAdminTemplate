@@ -1,0 +1,22 @@
+/* dropzone */
+
+.dz-container {
+    margin-top: 10px;
+}
+
+.dropzone {
+    border: 3px dashed darkblue;
+    min-height: 100px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    background: rgba(50, 50, 50, 0.06);
+    padding-top: 10px;
+    margin: 0px;
+    height: auto;
+}
+
+.dz-default {
+    height: auto;
+    margin-top: 0px;
+    margin-bottom: 0px
+}

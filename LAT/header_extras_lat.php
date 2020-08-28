@@ -24,8 +24,10 @@ if ($ADMINAREA) {
 ?>
 
 
+<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/css/LAT_Custom.css">
 <script src="<?php echo PREPEND_PATH; ?>LAT/plugins/jquery-jeditable/jquery.jeditable.js"></script>
 <script src="<?php echo PREPEND_PATH; ?>LAT/tvedit/tv.edit.js"></script>
+<script src="<?php echo PREPEND_PATH; ?>LAT/plugins/commons/myCommonJs.js"></script>
 
 <script>
     function getMpi(data) {

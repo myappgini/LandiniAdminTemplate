@@ -13,18 +13,20 @@ if (!isset($Translation)) {
 }
 ?>
 <!-- Navbar -->
-<nav class="main-header navbar navbar-expand navbar-dark navbar-info">
+<nav class="main-header navbar navbar-expand navbar-dark navbar-info" style="background: #821800;">
   <!-- Navbar left Menu -->
   <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
-    </li>
-    <!-- Sidebar toggle button-->
+    <?php if(!$inLogin) {?>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+      </li>
+      <!-- Sidebar toggle button-->
+    <?php }?>
     <span class="navbar-text d-none d-lg-inline-block"><?php echo $LAT_globals['navbar-text']; ?></span>
 
   </ul>
   <!-- /Navbar left Menu -->
-  
+  <?php if(!$inLogin) {?>
   <form action="#" class="form-inline ml-3">
     <div class="input-group input-group-sm" id="quick-search-lat">
       <input type="text" id="SearchString" name="SearchString" value="<?php echo $searchString->raw; ?>" class="form-control form-control-navbar" placeholder="<?php echo $Translation["quick search"]; ?>">
@@ -34,7 +36,7 @@ if (!isset($Translation)) {
       </span>
     </div>
   </form>
-
+  <?php }?>
   <!-- Navbar right Menu -->
   <ul class="navbar-nav ml-auto">
     <li class="nav-item ">

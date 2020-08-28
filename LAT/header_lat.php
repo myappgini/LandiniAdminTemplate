@@ -42,6 +42,7 @@
 
 	<script src="<?php echo PREPEND_PATH; ?>LAT/adminlte3/plugins/jquery/jquery.min.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>LAT/adminlte3/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<script src="<?php echo PREPEND_PATH; ?>LAT/adminlte3/plugins/popper/popper.min.js"></script>
 	<script>
 		//Resolve conflict in jQuery UI tooltip with Bootstrap tooltip
 		$.widget.bridge('uibutton', $.ui.button);

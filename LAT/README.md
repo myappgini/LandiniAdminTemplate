@@ -1,7 +1,7 @@
 
 # Landini Andmin Template for AppGini with AdminLTE 3 and bootstrap 4
 
-## Release R2.0.0
+## Release R2.6.0
 
 
 ![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/Template001.PNG)
@@ -40,25 +40,48 @@ The variables can be updated, by the admin user, from the right control panel. L
 
 Enjoy the template and stay tuned for your comments.
 
-You can conmute to default appgini only changue true to false in config_lat.php the varible ```$LAT_enable```
+You can conmute to default appgini only changue true to false in config_lat.php the varible ```$LTE_enable```
 
 ```php
 
-function  getLteStatus($LAT_enable = true){
+function  getLteStatus($LTE_enable = true){
 
     if(!function_exists('getMemberInfo')){
 
-        $LAT_enable = false;
+        $LTE_enable = false;
 
     }
 
-    return  $LAT_enable;
+    return  $LTE_enable;
 
 }
 
 ```
 
 ## Changes
+28/08/20 (see more details in New Feature below)
+- In small screens, the table view is adapted to be seen vertically, for this, css and jquery were used.
+- New function to show fields in a line in the detail view.
+- New function to add information to the field
+- New function to remove text from buttons both in table views and in detail.
+- Fixes
+     - improved portability from bs3 to bs4, fixed various issues about this.
+     - some inconsistencies in the template are corrected.
+     - the control panel is corrected.
+     - the plugin installer is improved
+
+10/08/20
+- Update to AdminLTE 3.0.5
+- Once the plugin is installed, it is re-activated after a new compilation.
+- Modifications are made in folders for a better update of Admin LTE.
+- Different home pages can be programmed according to user groups.
+- the admin area now has the same environment as all the rest of the template.
+- The profile page now has a time-line where the movement of the last user record is shown.
+- the quick search is placed in the upper navigation bar.
+- fixes some spots for better viewing on small screens.
+- others fix.
+
+Last Changues
 
 - Update to AdminLTE 3.0.4
 
@@ -112,6 +135,35 @@ label[for='id'] + div {
 
 ## New Features
 
+- table view is adapted to be seen vertically.
+![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/TableNormalView.PNG)
+![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/TableSamallScreen.PNG)
+
+- Show fields in a line in the detail view and prepend information to the field
+![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/Prepend_info.png.PNG)
+
+simple use:
+``
+    inline_fields(['weightReal', 'wgh_unity'], false, [6, 3])
+    inline_fields(['dimensions', 'weightVolume', 'dim_unity'], false, [3, 3, 3])
+    inline_fields([arra with the fields name], 'custon label or get the first if false', [custon array withs of fields or empty for automatic])
+
+    prepend_btn('dimensions', "Unit Setting...", "...", "");
+    prepend_btn('field_name', "title info", "text", "icon-class");
+
+``
+- Buttons without labels function.
+![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/buttons_without_label.png.PNG)
+![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/buttons_without_label_TV.png.PNG)
+
+many option to use
+``  
+    removeText('#top_buttons .btn-group .btn');
+    removeText('.pagination-section .btn');
+    removeText('.btn');
+    removeText('#addNew');
+``
+
 - New Mebership Profile
 
 Add time line feature
@@ -130,4 +182,4 @@ If the hidden group is created, the tables that are within this group will only 
 
 ## Resources
   
-- <https://adminlte.io/themes/AdminLAT/documentation/index.html#introduction>
+- https://adminlte.io/docs/3.0/
